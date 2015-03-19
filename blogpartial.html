@@ -1,0 +1,15 @@
+<template name='blogpartial'>
+<div class="container">
+	<div class="blogContainer">
+	
+	{{#each posts}}
+	
+	<h2><a href='blog/{{this.slug}}' class='seventh before after'>{{title}}</a></h2>
+	<p>Published on {{publishedAt}}</p>
+	<p> {{excerpt}} ...<a href="blog/{{this.slug}}" class="seventh before after">Read More</a></p>
+	
+	{{/each}}
+	</div>
+</div>
+</template>
+

@@ -1,0 +1,12 @@
+<template name='blogpartial'>
+		 <h1>Welcome to my Blog</h1>
+  <ul>
+    {{#each posts}}
+      <li>
+        <a href="{{this}}"><h2>{{title}}</h2></a>
+        <p>Published on {{publishedAt}}</p>
+        <p>Excerpt: {{excerpt}}</p>
+      </li>
+    {{/each}}
+  </ul>
+	</template>

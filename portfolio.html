@@ -1,0 +1,68 @@
+<head>
+	<title>Aaron Case - Web Developer</title>
+	
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">Aaron Case</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/blog">Blog</a></li>
+					
+					
+				</ul>
+				
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
+		<br><br>
+		<!-- <h1>This is the Barebones Redesign of my portfolio</h1>
+		{{> loginButtons}} -->
+		
+	</body>
+	<template name='home'>
+		<section class="first">
+	<div class="container">
+		<div class="centerLogo">
+			<h1 class='text-center'>Aaron Case: Web Developer</h1>
+			<h2 class='text-center'>I Make Things</h2>
+			<h3 class='text-center'>Sometimes they even work!</h3>
+			<div class="text-center"><a href="" class="third after"><i class="fa fa-chevron-down bigicons" onclick='$(".second").animatescroll({padding:110});'></i></a></div>
+		</div>
+
+	</div>
+</section>
+<section class="second">
+	
+	<h1 class='text-center'>...There's nothing here yet. But you can check out my <a href="/blog" class="seventh  after">Blog</a></h1>
+
+	{{> blogLatest num=1}}
+
+
+</section>
+	</template>
+	<template name="adminTemplate">
+	{{#if isAdminUser}}
+	{{> accountsAdmin}}
+	{{else}}
+	Must be admin to see this...
+	{{/if}}
+	</template>
+	<template name='test'>
+	<h1>If it's this easy I'm going to cry</h1>
+	</template>
+	<template name='secretadminlogin'>{{> loginButtons}}</template>
+<template name='blogStyle'>
+		{{>blogpartial}}
+	</template>
+	
